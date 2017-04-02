@@ -14,15 +14,15 @@
     <section class="questions">
         <div class="panel panel-default">
             <div class="panel-body">
-                <form method="POST">
+                <form id="questions_form" method="POST">
                     <div class="" id="dynamicInput">
                         <div class="form-group">
                             <label for="field1">Enter your Question 1:</label>
-                            <input type="text" class="form-control" id="field1" name="myInputs[]" placeholder="Enter your question here">
+                            <input type="text" class="form-control" id="field1" name="qstn1" placeholder="Enter your question here">
                         </div>
                         <div class="form-group form-inline ">
-                            <input type="text" id="left-input" class="form-control" placeholder="Answer choice 1">
-                            <input type="text" id="middle-input" class="form-control" placeholder="Answer choice 2">
+                            <input type="text" id="left-input" class="form-control" name="ans1_1" placeholder="Answer choice 1">
+                            <input type="text" id="middle-input" class="form-control" name="ans1_2" placeholder="Answer choice 2">
                         </div>
                     </div>
                     <div class="">
@@ -40,40 +40,59 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <p class="h3">Outcomes:</p>
-          <form class="" action="" method="post">
-            <fieldset>
-              <div class="form-group">
-                <input class="form-control" type="text" name="outcome_title1" value="" placeholder="Outcome title">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="outcome_description1" rows="3" value="" placeholder="Outcome description"></textarea>
-              </div>
-            </fieldset>
+          <form class="" id="outcomes_form" action="" method="post">
+            <div class="" id="characters_div">
+              <fieldset>
+                <div class="form-group">
+                  <input class="form-control" type="text" name="char1" value="" placeholder="Outcome title">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="char_desc1" rows="3" value="" placeholder="Outcome description"></textarea>
+                </div>
+              </fieldset>
 
-            <fieldset>
-              <div class="form-group">
-                <input class="form-control" type="text" name="outcome_title2" value="" placeholder="Outcome title">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="outcome_description2" rows="3" value="" placeholder="Outcome description"></textarea>
-              </div>
-            </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <input class="form-control" type="text" name="char2" value="" placeholder="Outcome title">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="char_desc2" rows="3" value="" placeholder="Outcome description"></textarea>
+                </div>
+              </fieldset>
 
-            <fieldset>
-              <div class="form-group">
-                <input class="form-control" type="text" name="outcome_title3" value="" placeholder="Outcome title">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="outcome_description3" rows="3" value="" placeholder="Outcome description"></textarea>
-              </div>
-            </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <input class="form-control" type="text" name="char3" value="" placeholder="Outcome title">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="char_desc3" rows="3" value="" placeholder="Outcome description"></textarea>
+                </div>
+              </fieldset>
+            </div>
 
             <div class="">
-                <input type="button" class="btn btn-primary" value="+ Add Outcome" onclick="">
-                <input class="btn btn-primary" type="button" name="next1" value="Next" id="next-btn2">
+                <input type="button" class="btn btn-primary" value="+ Add Outcome" onclick="addCharacter('characters_div');">
+                <input class="btn btn-primary" type="button" name="next1" value="Next" id="next-btn2" >
             </div>
 
 
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3rd section. It is for questions,answers and character mappings -->
+
+    <section class="character_mappings" style="display:none">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p class="h3">Answers:</p>
+          <p>Click each option to select which outcomes it relates to!</p>
+          <form class="" action="" method="">
+            <div class="answers_mappings" id="mappings">
+
+
+            </div>
           </form>
         </div>
       </div>
